@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- iPhone PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="StickerSwap" />
+  <meta name="theme-color" content="#080808" />
+
+  <!-- SEO -->
+  <meta name="description" content="Intercambia láminas con coleccionistas cerca de ti. Complete your sticker album faster." />
+  <title>StickerSwap</title>
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='2' y='2' width='13' height='13' rx='3' fill='%2339ff14'/><rect x='17' y='2' width='13' height='13' rx='3' fill='%2339ff14' opacity='.3'/><rect x='2' y='17' width='13' height='13' rx='3' fill='%2339ff14' opacity='.3'/><rect x='17' y='17' width='13' height='13' rx='3' fill='%2339ff14'/></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { height: 100%; background: #080808; }
+    body {
+      height: 100%;
+      background: #080808;
+      color: #fff;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      /* Disable iOS tap highlight */
+      -webkit-tap-highlight-color: transparent;
+      /* Prevent iOS bounce scroll */
+      overscroll-behavior: none;
+    }
+    #root { height: 100%; }
+    /* iOS input fix */
+    input, button, textarea, select {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+    input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+      font-size: 16px !important; /* Prevents iOS zoom on focus */
+    }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #1a3a12; border-radius: 2px; }
+    /* Selection */
+    ::selection { background: rgba(57,255,20,0.2); }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
